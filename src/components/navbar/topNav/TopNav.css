@@ -1,0 +1,40 @@
+.nav{
+    background-color: #CC0000;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;    
+    padding: .5rem 0;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.left, .right{
+    display: flex;
+}
+.left li{
+    transition: .4s all;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 4.7rem;
+    margin-right: 1rem;
+}
+.left li:hover{
+    background-color: #AA0000;
+    cursor: pointer;
+}
+.right li{
+    transition: .4s all;
+    margin-right: 1rem;
+    font-size: .8rem;
+}
+.right li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
