@@ -1,0 +1,68 @@
+.store-text {
+  text-align: center;
+}
+.store-text h1 {
+  font-size: 1.5rem;
+}
+.store-text p {
+  margin: 1rem 0;
+  color: rgba(0, 0, 0, 0.678);
+}
+.store-text p span {
+  text-decoration: underline;
+  transition: .4s all;
+}
+.store-text p span:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.store-buttons button,
+.box .buttons button {
+  background-color: white;
+  padding: .7rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.651);
+  color: rgba(0, 0, 0, 0.685);
+  cursor: pointer;
+  margin-right: 1rem;
+  border-radius: .5rem;
+}
+.store-buttons button:hover,
+.box .buttons button:hover {
+  background-color: rgba(189, 183, 183, 0.158);
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.info-box .box {
+  width: 32%;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: .5rem;
+}
+.info-box .box h3 {
+  padding-bottom: .5rem;
+  border-bottom: 1px solid gray;
+  font-size: 1.2rem;
+}
+.info-box .box p {
+  margin: 1rem 0;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+.box .buttons {
+  display: flex;
+  justify-content: start;
+}

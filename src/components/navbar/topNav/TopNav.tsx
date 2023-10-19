@@ -51,7 +51,7 @@ function TopNav() {
         {
             name: 'Weekly Ad',
             id: 2,
-            to: '/gift-registry'
+            to: '/weekly-ad'
         },
         {
             name: 'RedCard',
