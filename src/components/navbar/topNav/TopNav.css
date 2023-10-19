@@ -1,40 +1,125 @@
-.nav{
-    background-color: #CC0000;
-    /* display: flex; */
-    justify-content: space-between;
-    align-items: center;    
-    padding: .5rem 0;
+.nav {
+  background-color: #cc0000;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0;
 }
-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+.nav section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
-.left, .right{
-    display: flex;
+.left,
+.right {
+  display: flex;
 }
-.left li{
-    transition: .4s all;
-    padding: .5rem;
-    border-radius: .5rem;
-    font-size: .8rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 4.7rem;
-    margin-right: 1rem;
+.left li {
+  transition: .4s all;
+  padding: .5rem;
+  border-radius: .5rem;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 4.7rem;
+  margin-right: 1rem;
 }
-.left li:hover{
-    background-color: #AA0000;
-    cursor: pointer;
+.left li:hover {
+  background-color: #aa0000;
+  cursor: pointer;
 }
-.right li{
-    transition: .4s all;
-    margin-right: 1rem;
-    font-size: .8rem;
+
+.right li a {
+  transition: .4s all;
+  margin-left: 1.5rem;
+  font-size: .8rem;
 }
-.right li:hover{
-    cursor: pointer;
-    text-decoration: underline;
+.right li a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+p,
+.p1 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.my-location span {
+  margin: 1rem 0 0 .5rem;
+  display: flex;
+  align-items: center;
+  transition: .4s all;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.726);
+  font-size: 1rem;
+}
+.update-btn {
+  background-color: #cc0103;
+  color: white;
+  width: 90%;
+  border: 1px solid #cc0103;
+  outline: none;
+  border-radius: .3rem;
+  padding: .8rem;
+  font-weight: bolder;
+  font-size: 1rem;
+  transition: .4s all;
+  left: 15px;
+  bottom: 20px;
+  position: absolute;
+}
+.update-btn:hover {
+  cursor: pointer;
+  background-color: #aa0000;
+}
+.look {
+  display: flex;
+  justify-content: space-between;
+}
+.look-up {
+  background-color: #cc0103;
+  color: white;
+  border: 1px solid #cc0103;
+  outline: none;
+  border-radius: .3rem;
+  padding: .5rem;
+  font-weight: bolder;
+  font-size: .9rem;
+  transition: .4s all;
+  width: 30%;
+}
+.look-up:hover {
+  cursor: pointer;
+  background-color: #aa0000;
+}
+.span2 {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0 .5rem;
+  transition: .4s all;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.726);
+  font-size: 1rem;
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-drawer .ant-drawer-header {
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+:where(.css-dev-only-do-not-override-3mqfnx).ant-drawer .ant-drawer-header-title {
+  flex-direction: row-reverse;
+}
+:where(.css-dev-only-do-not-override-3mqfnx).ant-drawer .ant-drawer-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  width: 100%;
+}
+.drawer-div {
+  display: flex;
+  flex-direction: column;
 }

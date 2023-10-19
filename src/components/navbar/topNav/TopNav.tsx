@@ -1,76 +1,119 @@
+import { useRef, useState } from 'react';
+import { Drawer } from 'antd';
 import './TopNav.css'
-import { Modal } from 'antd';
-import { useState } from 'react';
 import { GoLocation } from 'react-icons/go'
+import { MdLocationOn } from 'react-icons/md'
 import { BsBuildingsFill } from 'react-icons/bs'
+import { TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 function TopNav() {
+    const [open, setOpen] = useState<boolean>(false);
+    const [open1, setOpen1] = useState<boolean>(false);
+    const li = useRef<HTMLLIElement>(null)
+    const showDrawer = () => {
+        setOpen(true);
+    };
+
+    const onClose = () => {
+        setOpen(false);
+        handleFocus()
+    }
+    const showDrawer1 = () => {
+        setOpen1(true);
+    };
+
+    const onClose1 = () => {
+        setOpen1(false);
+    }
+
+
+    function handleFocus() {
+        console.log(li.current);
+
+
+        li.current?.style.backgroundColor// Alinmir
+
+    }
+
     interface myListItems {
         name: string;
         id: number;
+        to: string;
     }
 
     const listItems: myListItems[] = [
         {
             name: 'Registry',
-            id: 1
+            id: 1,
+            to: '/gift-registry'
         },
         {
             name: 'Weekly Ad',
-            id: 2
+            id: 2,
+            to: '/gift-registry'
         },
         {
             name: 'RedCard',
-            id: 3
+            id: 3,
+            to: '/redcard'
+
         },
         {
             name: 'Target Circle',
-            id: 4
+            id: 4,
+            to: '/circle'
         },
 
         {
             name: 'Find Stores',
-            id: 5
+            id: 5,
+            to: '/find-stores'
         }
     ]
-
-
-    const [modalOpen, setModalOpen] = useState(false);
 
     return (
         <div className="nav">
             <div className="container">
                 <section>
                     <ul className="left">
-                        <li onClick={() => setModalOpen(true)}><GoLocation />  52404</li>
-                        <Modal
-                            title="20px to Top"
-                            style={{ position: 'absolute', top: '10px', left: '0px' }}
-                            open={modalOpen}
-                            onOk={() => setModalOpen(false)}
-                            onCancel={() => setModalOpen(false)}
-                            okButtonProps={{ disabled: true }}
-                            width='15rem'
-                        >
-                            <p>some contents...</p>
-                            <p>some contents...</p>
-                            <p>some contents...</p>
-                        </Modal>
+                        <li ref={li} onBlur={handleFocus} onClick={showDrawer}><GoLocation />  52404</li>
+                        <Drawer title="Update Location " placement="left" onClose={onClose} open={open}>
+                            <div className="drawer-div">
+                                <p className='p1'>Inventory and delivery options will change based on location.</p>
+                                <TextField label="Zip code" focused />
+                                <div className='my-location'>
+                                    <span> <MdLocationOn style={{ color: " #aa0000", fontSize: '1.6rem' }} /> Use my current location</span>
+                                    <button className='update-btn'>Update</button>
 
+                                </div>
 
-                        <li><BsBuildingsFill /> Ankeny</li>
+                            </div>
+                        </Drawer>
+                        <li onClick={showDrawer1}><BsBuildingsFill /> Ankeny</li>
+                        <Drawer title='Select your store' placement="left" onClose={onClose1} open={open1}>
+                            <div className="drawer-div">
+                                <p>Item and delivery options may vary by location.</p>
+                                <div className="look">
+                                    <TextField id="outlined-basic" label="zip or city,state" variant="outlined" />
+                                    <button className='look-up'>Look Up</button>
+                                </div>
+                                <span className='span2'> <MdLocationOn style={{ color: " #aa0000", fontSize: '1.6rem' }} /> Use my current location</span>
+                            </div>
+                        </Drawer>
                     </ul>
 
                     <ul className="right">
-                        {listItems.map(item => <li key={item.id}>{item.name}</li>)}
+                        {listItems.map(item => <li key={item.id}><Link style={{ color: 'white' }} to={item.to}> {item.name}</Link></li>)}
                     </ul>
                 </section>
             </div>
-        </div>
+        </div >
     )
 }
 
 export default TopNav
+
 
 
 

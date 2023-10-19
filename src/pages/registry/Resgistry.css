@@ -1,0 +1,73 @@
+.registry {
+  background-color: #fceaeb;
+}
+.first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first .left {
+  align-items: center;
+}
+.first .left h1 {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.699);
+}
+.first figure {
+  width: 60px;
+  height: 60px;
+}
+.first figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.first .right .sign-in {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.699);
+  transition: .4s all;
+}
+.first .right .sign-in:hover {
+  text-decoration: none;
+  color: black;
+}
+.registry .second {
+  background-color: #eebec1;
+}
+.registry .second figure {
+  width: 55rem;
+  height: 28rem;
+  margin: 0 auto;
+}
+.registry .second figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.registry .third {
+  background-image: url(https://target.scene7.com/is/image/Target/Papertexture);
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.registry .third h4{
+    font-size: 1.2rem;
+    margin-bottom: .6rem;
+}
+.registry .third button{
+    padding: 1rem 8rem;
+    color: black;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: .4s all;
+    font-size: 1rem;
+}
+.registry .third button:hover{
+    background-color:#F7F7F7;
+    border: 1px solid black;
+}
