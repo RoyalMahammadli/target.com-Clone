@@ -5,6 +5,7 @@ import Redcard from "../pages/redcard/Redcard"
 import Target from "../pages/targetCircle/Target"
 import Findstores from "../pages/findStores/Findstores"
 import Weeklyad from "../pages/weeklyAd/Weeklyad"
+import Notfound from "../pages/notFound/Notfound"
 
 function Routing() {
     return (
@@ -16,6 +17,7 @@ function Routing() {
                 <Route path="/redcard" element={<Redcard />} />
                 <Route path="/circle" element={<Target />} />
                 <Route path="/find-stores" element={<Findstores />} />
+                <Route path='*' element={<Notfound />} />
 
             </Routes>
         </div>

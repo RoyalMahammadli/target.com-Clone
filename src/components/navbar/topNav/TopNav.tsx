@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { Drawer } from 'antd';
+import { listItems } from '../../../const';
 import './TopNav.css'
 import { GoLocation } from 'react-icons/go'
 import { MdLocationOn } from 'react-icons/md'
@@ -14,7 +15,6 @@ function TopNav() {
     const showDrawer = () => {
         setOpen(true);
     };
-
     const onClose = () => {
         setOpen(false);
         handleFocus()
@@ -22,56 +22,13 @@ function TopNav() {
     const showDrawer1 = () => {
         setOpen1(true);
     };
-
     const onClose1 = () => {
         setOpen1(false);
     }
-
-
     function handleFocus() {
         console.log(li.current);
-
-
         li.current?.style.backgroundColor// Alinmir
-
     }
-
-    interface myListItems {
-        name: string;
-        id: number;
-        to: string;
-    }
-
-    const listItems: myListItems[] = [
-        {
-            name: 'Registry',
-            id: 1,
-            to: '/gift-registry'
-        },
-        {
-            name: 'Weekly Ad',
-            id: 2,
-            to: '/weekly-ad'
-        },
-        {
-            name: 'RedCard',
-            id: 3,
-            to: '/redcard'
-
-        },
-        {
-            name: 'Target Circle',
-            id: 4,
-            to: '/circle'
-        },
-
-        {
-            name: 'Find Stores',
-            id: 5,
-            to: '/find-stores'
-        }
-    ]
-
     return (
         <div className="nav">
             <div className="container">
@@ -87,7 +44,6 @@ function TopNav() {
                                     <button className='update-btn'>Update</button>
 
                                 </div>
-
                             </div>
                         </Drawer>
                         <li onClick={showDrawer1}><BsBuildingsFill /> Ankeny</li>

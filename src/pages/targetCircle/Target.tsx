@@ -1,21 +1,16 @@
 import './Target.css'
 function Target() {
-
-
-
     return (
         <div className='target'>
             <div className="container">
                 <section className='target1'>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-
                         <figure>
                             <img src="../src/assets/img/target_icon.png" alt="icon_img" />
                         </figure>
                         <span>circle<sub>tm</sub> </span>
                     </div>
                     <ul>
-
                         <li style={{
                             borderBottom: '3px solid #cc0000'
                         }}>About circle</li>
@@ -23,9 +18,6 @@ function Target() {
                         <li>Bonus</li>
                         <li>Partners</li>
                     </ul>
-
-
-
                 </section>
                 <section>
                     <div className="target2">
@@ -33,7 +25,6 @@ function Target() {
                             <h1> Bringing back a special tribute to military, veterans & families</h1>
                             <p>Get 10% off two qualifying storewide purchases with Target◎circleTM 1 Returning 10/29–11/11.</p>
                         </div>
-
                         <div className="div2">
                             <div className="txt">
                                 <p>Meet Target’s rewards program</p>

@@ -1,8 +1,10 @@
 .store-text {
   text-align: center;
+  margin-top: 2rem;
 }
 .store-text h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.849) ;
 }
 .store-text p {
   margin: 1rem 0;
