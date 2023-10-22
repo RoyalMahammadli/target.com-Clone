@@ -94,36 +94,86 @@ export const storeItems: myStoreItems[] = [
 ];
 //Navbar/topNav
 export interface myListItems {
-    name: string;
-    id: number;
-    to: string;
+  name: string;
+  id: number;
+  to: string;
 }
 export const listItems: myListItems[] = [
-    {
-        name: 'Registry',
-        id: 1,
-        to: '/gift-registry'
-    },
-    {
-        name: 'Weekly Ad',
-        id: 2,
-        to: '/weekly-ad'
-    },
-    {
-        name: 'RedCard',
-        id: 3,
-        to: '/redcard'
+  {
+    name: "Registry",
+    id: 1,
+    to: "/gift-registry"
+  },
+  {
+    name: "Weekly Ad",
+    id: 2,
+    to: "/weekly-ad"
+  },
+  {
+    name: "RedCard",
+    id: 3,
+    to: "/redcard"
+  },
+  {
+    name: "Target Circle",
+    id: 4,
+    to: "/circle"
+  },
 
-    },
-    {
-        name: 'Target Circle',
-        id: 4,
-        to: '/circle'
-    },
+  {
+    name: "Find Stores",
+    id: 5,
+    to: "/find-stores"
+  }
+];
 
-    {
-        name: 'Find Stores',
-        id: 5,
-        to: '/find-stores'
-    }
-]
+//home/index.ts
+export interface myHallowenItems {
+  name: string;
+  img: string;
+  nameExtens?: string;
+  id: number;
+  percentNumb: string;
+  percent: string;
+  off: string;
+}
+export const HallowenItems: myHallowenItems[] = [
+  {
+    name: "costumes & decor*",
+    img:
+      "https://target.scene7.com/is/image/Target/GUEST_10ee1d04-2b1f-416b-adf8-abfaf3504be1?wid=521&qlt=80&fmt=webp",
+    id: 1,
+    percentNumb: "30",
+    percent: "%",
+    off: "off"
+  },
+  {
+    name: " trick-or-treat candy",
+    nameExtens: "with same-day delivery or pickup*",
+    img:
+      "https://target.scene7.com/is/image/Target/GUEST_0a91eee7-bfe9-414b-91a3-063d61294280?wid=521&qlt=80&fmt=webp",
+    id: 1,
+    percentNumb: "25",
+    percent: "%",
+    off: "off"
+  },
+  {
+    name: "pet costumes, treats & toys*",
+    img:
+      "https://target.scene7.com/is/image/Target/GUEST_7ff6282e-ee5a-4ef5-a8c0-94850ffce809?wid=521&qlt=80&fmt=webp",
+    id: 1,
+    percentNumb: "30",
+    percent: "%",
+    off: "off"
+  },
+  {
+    name: "Everything Halloween",
+    nameExtens: "Celebrate the season of creepy-crawlies & sweet treats.",
+    img:
+      "https://target.scene7.com/is/image/Target/GUEST_a0908e56-7afb-49fd-9b11-85ee955d7537?wid=521&qlt=80&fmt=webp",
+    id: 1,
+    percentNumb: "",
+    percent: "",
+    off: ""
+  }
+];

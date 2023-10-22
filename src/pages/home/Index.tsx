@@ -1,29 +1,26 @@
-// import { useEffect, useState } from "react"
-// import axios from "axios"
+import { useEffect, useState } from "react"
+import axios from "axios"
 import './home.css'
+import { HallowenItems } from '../../const'
+import Card from '../../components/ui/Card/Card'
 
 function Index() {
-    // const url: string = 'https://fakestoreapi.com/products'
-    // interface myshopItems {
-    //     [key: string]: string
-    // }
-    // const [data, setData] = useState<myshopItems[] | null>()
-    // const fetchData = async () => {
-    //     try {
-    //         const response = await axios.get(url)
-    //         setData(response.data)
+    const url: string = 'https://fakestoreapi.com/products'
+    interface myshopItems {
+        [key: string]: string
+    }
+    const [data, setData] = useState<myshopItems[] | null>()
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(url)
+            setData(response.data)
 
-    //     } catch (err) {
-    //         console.log("error");
+        } catch (err) {
+            console.log("error");
 
-    //     }
-    // }
-    // useEffect(() => { fetchData() }, [])
-
-
-
-
-
+        }
+    }
+    useEffect(() => { fetchData() }, [])
     return (
         <div>
             <div className="container">
@@ -58,8 +55,45 @@ function Index() {
                         </figure>
                     </div>
                 </section>
-            </div>
+                <section className='home-2'>
+                    <h1>Hallowen, right this way</h1>
+                    <div className="home2-boxcontent">
+                        {HallowenItems.map(item => {
+                            return (
+                                <div className="home-2-box">
+                                    <figure>
+                                        <img src={item.img} alt="" />
+                                        <div className="percent">
+                                            <h2>{item.percentNumb}</h2>
+                                            <div style={{ display: "flex", flexDirection: 'column' }}>
+                                                <p>{item.percent}</p>
+                                                <p>{item.off}</p>
 
+                                            </div>
+                                        </div>
+                                    </figure>
+                                    <div className="home-2-box-text">
+                                        <h5>{item.name}</h5>
+                                        <p>{item.nameExtens}</p>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </section>
+                <section className='home-3'>
+                    <h1>Trending in Hyde &EEK! Boutiqe</h1>
+                    {data?.map(item => {
+                        return (
+                            <Card key={item.id} {...item} />
+
+                        )
+                    })}
+
+
+
+                </section>
+            </div>
         </div>
     )
 }

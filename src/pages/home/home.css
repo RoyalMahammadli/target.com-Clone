@@ -9,8 +9,8 @@
   color: white;
   cursor: pointer;
 }
-.home-txt:hover p{
-    text-decoration: underline;
+.home-txt:hover p {
+  text-decoration: underline;
 }
 .home-1 .home-txt figure {
   width: 6.5rem;
@@ -18,71 +18,139 @@
 .home-1 .home-txt figure img {
   width: 100%;
   object-fit: cover;
-  filter: brightness(0) invert(1)
+  filter: brightness(0) invert(1);
+}
+.home-1 .home-txt h1 {
+  font-size: 6.5rem;
+  width: 75%;
+}
+.home-1 .home-txt p {
+  width: 30%;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+.home-txt p span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-img1 {
+  position: relative;
+  cursor: pointer;
+}
+.home-img1:hover p {
+  text-decoration: underline;
+}
+.home-img1 figure {
+  width: 100%;
+}
+.home-img1 figure img {
+  width: 100%;
+}
+.home-img1 p {
+  color: white;
+  position: absolute;
+  top: 6rem;
+  left: 3rem;
+  font-size: 1.5rem;
+  width: 30%;
+}
+.home-img1 h1 {
+  font-size: 6.5rem;
+  margin-bottom: 2rem;
+}
+.home-img1 span {
+  margin-top: 3rem;
+}
+.home-img2 {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  position: relative;
+}
+.home-img2 figure {
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+}
+.home-img2 figure:hover p {
+  text-decoration: underline;
+}
+.home-img2 figure img {
+  width: 100%;
+}
+.home-img2 figure p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.home-img2 h1 {
+  position: absolute;
+  top: 5.5rem;
+  margin-left: 3rem;
+  font-size: 2.5rem;
+}
+.home-2 {
+  background-color: #762a83;
+  padding: 2rem 2rem 4rem 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
+.home-2-box {
+  cursor: pointer;
+}
+.home-2-box:hover .home-2-box-text {
+  text-decoration: underline;
+}
+.home-2 h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.home2-boxcontent {
+  display: flex;
+  justify-content: space-between;
+}
+.home-2-box figure {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
 
+.home-2-box figure .percent {
+  position: absolute;
+  top: 0;
+  display: flex;
+  top: 2rem;
+  left: 2rem;
+  font-size: 2.6rem;
+  align-items: center;
 }
-.home-1 .home-txt h1{
-    font-size: 6.5rem;
-    width: 75%;
-}
-.home-1 .home-txt p{
-    width: 30%;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-}
-.home-txt p span{
-    font-weight: bold;
-    text-decoration: underline;
-}
-.home-img1{
-    position: relative;
-    cursor: pointer;
-}
-.home-img1:hover p{
-    text-decoration: underline;
-}
-.home-img1 figure{
-    width: 100%;
-}
-.home-img1 figure img{
-    width: 100%;
-}
-.home-img1 p{
-    color: white;
-    position: absolute;
-    top: 6rem;
-    left: 3rem;
-    font-size: 1.5rem;
-    width: 30%;
 
+.home-2-box .percent p {
+  font-size: 1.3rem;
+  margin: 0;
 }
-.home-img1 h1{
-    font-size: 6.5rem;
-    margin-bottom: 2rem;
+
+.home-2-box figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.home-img1 span{
-    margin-top: 3rem;
+.home-2-box-text h5 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  width: 90%;
 }
-.home-img2{
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    position: relative;
+.home-2-box-text p {
+  font-size: .9rem;
+  width: 85%;
+  margin: 0;
 }
-.home-img2 figure{
-    width: 48%;
-    text-align: center;
+.home-3 {
+  background-color: #a34894;
+  padding: 2rem;
 }
-.home-img2 figure img{
-    width: 100%;
-}
-.home-img2 figure p{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.home-img2 h1{
-    position: absolute;
-    top: 5.5rem;
-    margin-left: 3rem;
-    font-size: 2.5rem;
+.home-3 h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
 }
