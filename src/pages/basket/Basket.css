@@ -1,0 +1,99 @@
+.basket-1 {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 6px 12px 4px,
+    rgba(0, 0, 0, 0.04) 0px 4px 10px 2px, rgba(0, 0, 0, 0.06) 0px 2px 8px,
+    rgba(0, 0, 0, 0.04) 0px 2px 4px;
+  margin: 1rem 0;
+  position: relative;
+  padding: 5rem 0 0 0;
+}
+.default-empty {
+  text-align: center;
+  width: 20rem;
+  margin: 2rem auto;
+}
+.default-empty h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.default-empty button {
+  background-color: rgb(204, 0, 0);
+  width: 100%;
+  padding: .7rem 7.5rem;
+  border: 1px solid rgb(204, 0, 0);
+  border-radius: .3rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.default-empty button:hover {
+  background-color: #aa0000;
+  cursor: pointer;
+}
+.default-empty .help-btn {
+  position: absolute;
+  border-radius: .4rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 50, 50);
+  border: 1px solid rgb(143, 138, 138);
+  width: 2rem;
+  padding: .5rem 1.5rem;
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 1rem;
+  top: 1rem;
+  font-weight: 400;
+}
+.default-empty .help-btn:hover {
+  background-color: #f7f7f7;
+}
+.default-empty figure {
+  width: 100%;
+}
+.default-empty figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.basket-added-box {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 6px 12px 4px,
+    rgba(0, 0, 0, 0.04) 0px 4px 10px 2px, rgba(0, 0, 0, 0.06) 0px 2px 8px,
+    rgba(0, 0, 0, 0.04) 0px 2px 4px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.basket-added-box .basket-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid gray;
+}
+.basket-added-box figure {
+  width: 2rem;
+}
+.basket-added-box figure img {
+  width: 100%;
+  object-fit: cover;
+}
+.basket-added-box main ul li {
+  padding: 1rem 0;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.basket-added-box main ul li figure{
+  width: 6rem;
+}
+.basket-added-box main ul li figure img{
+  width: 100%;
+}
+.basket-added-box main ul li span{
+  color: #CC0000;
+  font-weight: bold;
+}
+.basket-added-box main ul p {
+margin: 0;
+text-transform: capitalize;
+}

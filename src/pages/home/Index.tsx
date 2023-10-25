@@ -1,26 +1,9 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
 import './home.css'
 import { HallowenItems } from '../../const'
-import Card from '../../components/ui/Card/Card'
+import MyCarousel from '../../components/ui/myCarousel/MyCarousel'
 
 function Index() {
-    const url: string = 'https://fakestoreapi.com/products'
-    interface myshopItems {
-        [key: string]: string
-    }
-    const [data, setData] = useState<myshopItems[] | null>()
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(url)
-            setData(response.data)
 
-        } catch (err) {
-            console.log("error");
-
-        }
-    }
-    useEffect(() => { fetchData() }, [])
     return (
         <div>
             <div className="container">
@@ -83,15 +66,7 @@ function Index() {
                 </section>
                 <section className='home-3'>
                     <h1>Trending in Hyde &EEK! Boutiqe</h1>
-                    {data?.map(item => {
-                        return (
-                            <Card key={item.id} {...item} />
-
-                        )
-                    })}
-
-
-
+                    <MyCarousel />
                 </section>
             </div>
         </div>
@@ -99,3 +74,8 @@ function Index() {
 }
 
 export default Index
+
+
+
+
+

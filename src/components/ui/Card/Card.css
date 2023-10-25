@@ -1,0 +1,108 @@
+.card {
+  background-color: white;
+  border-radius: .5rem;
+  padding: .5rem;
+  box-shadow: 1px 1px 1px 3px rgb(32, 32, 32);
+  cursor: pointer;
+  width: 180px;
+}
+.card .top:hover p {
+  text-decoration: underline;
+}
+.card figure {
+  width: 10rem;
+  height: 9rem;
+  padding: 1rem;
+  border-radius: .4rem;
+}
+.card span {
+  color: #cc000f;
+  font-weight: bold;
+  padding: .5rem;
+}
+.card figure img {
+  width: 100%;
+  height: 100%;
+}
+.card p {
+  margin: 0;
+  font-size: .8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 11.4rem;
+  padding: 0 0.5rem;
+  text-transform: capitalize;
+}
+.card button {
+  width: 90%;
+  margin: 0.5rem;
+  background-color: rgb(204, 0, 15);
+  padding: .4rem;
+  border: 1px solid rgb(204, 0, 15);
+  border-radius: .5rem;
+  color: white;
+  transition: .4s all;
+}
+.card button:hover,
+.drawer-bot button:hover {
+  background-color: rgb(170, 2, 13);
+  cursor: pointer;
+}
+.drawer-top {
+  display: flex;
+}
+.drawer-top figure {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.drawer-top figure img {
+  width: 100%;
+  object-fit: cover;
+}
+.drawer-top .card-details {
+  padding: 1rem;
+}
+.drawer-top .card-details p:first-child {
+  font-weight: bolder;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.drawer-top .card-details p:first-child:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+.drawer-top .card-details p:nth-child(3) {
+  color: red;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.drawer-top .card-details p {
+  font-size: .9rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+.drawer-bot h5 {
+  color: green;
+  font-size: 1.1rem;
+  margin: 1rem 0 .5rem 0;
+}
+.drawer-bot span {
+  color: gray;
+}
+.drawer-bot button{
+  width: 100%;
+  margin: 1rem 0;
+  background-color: rgb(204, 0, 15);
+  padding: .9rem;
+  border: 1px solid rgb(204, 0, 15);
+  border-radius: .5rem;
+  color: white;
+  transition: .4s all;
+}
+.drawer-bot u{
+  text-decoration: underline;
+}

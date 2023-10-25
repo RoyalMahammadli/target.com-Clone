@@ -24,6 +24,8 @@ nav figure img {
 }
 .items {
   display: flex;
+  align-items: center;
+  gap:20px
 }
 .item {
   cursor: pointer;
@@ -96,23 +98,31 @@ nav .sign {
 nav .sign span {
   margin-left: .5rem;
 }
+.basket {
+  transition: .4s all;
+  padding: .7rem;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.basket:hover {
+  background-color: #f7f7f7;
+}
 .basket span {
   font-size: 1.2rem;
   cursor: pointer;
   position: relative;
 }
-.basket .quantity{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 18px;
-    height: 18px;
-    background-color: #CC0000;
-    border-radius: 50%;
-    font-size: .7rem;
-    position: absolute;
-    left: 15px;
-    top: -15px;
-    color: white;
-
+.basket .quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  background-color: #cc0000;
+  border-radius: 50%;
+  font-size: .7rem;
+  position: absolute;
+  left: 15px;
+  top: -15px;
+  color: white;
 }

@@ -148,6 +148,8 @@
 .home-3 {
   background-color: #a34894;
   padding: 2rem;
+  overflow: hidden;
+
 }
 .home-3 h1 {
   text-align: center;

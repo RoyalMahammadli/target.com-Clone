@@ -1,0 +1,8 @@
+.card-content{
+    width: 100%;
+    display: flex ;
+    flex-wrap: nowrap;
+    column-gap: .8rem;
+
+  }
+  

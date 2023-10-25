@@ -5,8 +5,14 @@ import { VscAccount } from 'react-icons/vsc'
 import { BsCart } from 'react-icons/bs'
 import { useState, useEffect } from 'react'
 import SearchInput from '../../ui/searchInput/SearchInput'
+import { useSelector } from 'react-redux'
+import MyDropdown from '../../ui/myDropdown/MyDropdown'
+import { RootState } from '../../../store'
+
+
 function MainNav() {
-    const [open, setOpen] = useState<boolean>(false)
+
+    const basketItem = useSelector((store: RootState) => store.basket.basket)
     const [sticked, setSticked] = useState<string>('')
     const handleSticky = () => {
         const scrollTop = window.scrollY
@@ -21,43 +27,7 @@ function MainNav() {
         }
     }, [])
 
-    const handleDropdown = () => {
-        setOpen(!open)
 
-    }
-
-    interface myShopItems {
-        id: number;
-        name: string;
-        items?: string[]
-    }
-
-    const shopItems: myShopItems[] = [
-        {
-            id: 1,
-            name: 'Categories',
-            items: ['yea']
-
-        },
-        {
-            id: 2,
-            name: 'Deals',
-            items: ['woman', 'man', 'children']
-
-        },
-        {
-            id: 3,
-            name: "What's New",
-            items: ['woman', 'man', 'children']
-
-        },
-        {
-            id: 4,
-            name: 'Pickup & Delivery',
-            items: ['woman', 'man', 'children']
-
-        },
-    ]
 
     return (
         <header className={sticked} >
@@ -68,18 +38,10 @@ function MainNav() {
                     </figure>
                     </Link>
                     <div className="items">
-                        {shopItems.map(item => {
-                            return (
-                                <div onClick={handleDropdown} className='item' key={item.id}>
-                                    <p >{item.name}</p>
-                                    <span className={!open ? 'down' : 'up'}><AiOutlineDown /> </span>
-                                    <ul className={!open ? 'none' : 'dropdown'}>
-                                        <li>{item.items}</li>
-                                        <li>{item.items}</li>
-                                        <li>{item.items}</li>
-                                    </ul>
-                                </div>)
-                        })}
+                        <MyDropdown />
+                        <div>Deals</div>
+                        <div>What's New</div>
+                        <div>Pickup & Delivery</div>
                     </div>
                     <SearchInput />
                     <div className="sign">
@@ -87,9 +49,11 @@ function MainNav() {
                         <span>Sign in</span>
                         <span className='sign-span'><AiOutlineDown /></span>
                     </div>
-                    <div className="basket">
-                        <span><BsCart /> <sub className='quantity'>3</sub></span>
-                    </div>
+                    <Link to='/basket'>
+                        <div className="basket">
+                            <span><BsCart /> <sub className='quantity'>{basketItem.length}</sub></span>
+                        </div>
+                    </Link>
 
                 </nav>
             </div>
