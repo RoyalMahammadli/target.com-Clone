@@ -1,11 +1,15 @@
 import './home.css'
 import { HallowenItems } from '../../const'
 import MyCarousel from '../../components/ui/myCarousel/MyCarousel'
+import DropdownContext from '../../context/Context'
+import { useContext } from 'react'
 
 function Index() {
+    const { open, stopScroll } = useContext(DropdownContext)
+    stopScroll()
 
     return (
-        <div>
+        <div className='home'>
             <div className="container">
                 <section className="home-1">
                     <div className="home-txt">
@@ -69,6 +73,8 @@ function Index() {
                     <MyCarousel />
                 </section>
             </div>
+            <div className={open ? 'overlay' : ''}></div>
+
         </div>
     )
 }

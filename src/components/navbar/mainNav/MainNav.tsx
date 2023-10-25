@@ -39,9 +39,9 @@ function MainNav() {
                     </Link>
                     <div className="items">
                         <MyDropdown />
-                        <div>Deals</div>
-                        <div>What's New</div>
-                        <div>Pickup & Delivery</div>
+                        <p className='item'>Deals</p>
+                        <p className='item'>What's New</p>
+                        <p className='item'>Pickup & Delivery</p>
                     </div>
                     <SearchInput />
                     <div className="sign">
