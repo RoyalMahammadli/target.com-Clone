@@ -1,17 +1,15 @@
-import './MainNav.css'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { AiOutlineDown } from 'react-icons/ai'
-import { VscAccount } from 'react-icons/vsc'
 import { BsCart } from 'react-icons/bs'
-import { useState, useEffect } from 'react'
-import SearchInput from '../../ui/searchInput/SearchInput'
+import { VscAccount } from 'react-icons/vsc'
 import { useSelector } from 'react-redux'
-import MyDropdown from '../../ui/myDropdown/MyDropdown'
+import { Link } from 'react-router-dom'
 import { RootState } from '../../../store'
-
+import MyDropdown from '../../ui/myDropdown/MyDropdown'
+import SearchInput from '../../ui/searchInput/SearchInput'
+import './MainNav.css'
 
 function MainNav() {
-
     const basketItem = useSelector((store: RootState) => store.basket.basket)
     const [sticked, setSticked] = useState<string>('')
     const handleSticky = () => {
@@ -19,16 +17,12 @@ function MainNav() {
         const sticky = scrollTop >= 50 ? 'stick' : ''
         setSticked(sticky)
     }
-
     useEffect(() => {
         window.addEventListener('scroll', handleSticky);
         return () => {
             window.removeEventListener('scroll', handleSticky)
         }
     }, [])
-
-
-
     return (
         <header className={sticked} >
             <div className="container">
@@ -54,10 +48,8 @@ function MainNav() {
                             <span><BsCart /> <sub className='quantity'>{basketItem.length}</sub></span>
                         </div>
                     </Link>
-
                 </nav>
             </div>
-
         </header >
     )
 }

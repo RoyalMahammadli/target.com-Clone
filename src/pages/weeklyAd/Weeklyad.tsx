@@ -11,13 +11,11 @@ function Weeklyad() {
             </section>
             <div className="containerr">
                 <section className='ad2'>
-
                     <h2>Weekly Ads & Catalogs</h2>
                     <div className='ad-main-txt'>
                         <figure>
                             <img src="../src/assets/img/weekly ad.PNG" alt="weklyad picture" />
                         </figure>
-
                         <div className="ad-txt">
                             <h1>Weekly ad</h1>
                             <p>Prices Valid Oct 15 - Oct 21</p>

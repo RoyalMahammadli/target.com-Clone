@@ -1,6 +1,6 @@
-import { storeItems } from '../../const';
 import { nanoid } from 'nanoid';
-import './Findstores.css'
+import { storeItems } from '../../const';
+import './Findstores.css';
 function Findstores() {
 
     return (

@@ -1,12 +1,9 @@
-import './home.css'
-import { HallowenItems } from '../../const'
+import { nanoid } from 'nanoid'
 import MyCarousel from '../../components/ui/myCarousel/MyCarousel'
-import DropdownContext from '../../context/Context'
-import { useContext } from 'react'
+import { HallowenItems } from '../../const'
+import './home.css'
 
 function Index() {
-    const { open, stopScroll } = useContext(DropdownContext)
-    stopScroll()
 
     return (
         <div className='home'>
@@ -47,7 +44,7 @@ function Index() {
                     <div className="home2-boxcontent">
                         {HallowenItems.map(item => {
                             return (
-                                <div className="home-2-box">
+                                <div className="home-2-box" key={nanoid()}>
                                     <figure>
                                         <img src={item.img} alt="" />
                                         <div className="percent">
@@ -73,7 +70,6 @@ function Index() {
                     <MyCarousel />
                 </section>
             </div>
-            <div className={open ? 'overlay' : ''}></div>
 
         </div>
     )

@@ -1,0 +1,74 @@
+.category {
+  padding: 3rem 0;
+}
+.category ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.category ul li {
+  border-bottom: 1px solid rgb(211, 209, 209);
+  border-right: 1px solid rgb(211, 209, 209);
+  width: 25%;
+}
+.category ul li figure {
+  width: 8.5rem;
+  height: 9.5rem;
+  display: flex;
+  margin: 0 auto;
+  transition: .6s all;
+}
+.category ul li figure:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+.category ul li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.category .item-info {
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.item-info h4 {
+  margin-bottom: .5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.item-info span {
+  color: gray;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.item-info span:hover {
+  text-decoration: underline;
+}
+.item-info .price {
+  color: #cc000f;
+  font-weight: bold;
+}
+.item-info .sale {
+  color: #cc000f;
+  font-weight: 500;
+}
+.item-info .free {
+  color: green;
+}
+.item-info button {
+  width: 30%;
+  margin: 0.5rem 0;
+  background-color: rgb(204, 0, 15);
+  padding: .4rem;
+  border: 1px solid rgb(204, 0, 15);
+  border-radius: .3rem;
+  color: white;
+  transition: .4s all;
+  font-weight: 600;
+  font-size: .8rem;
+}
+.item-info button:hover {
+  background-color: rgb(170, 2, 13);
+  cursor: pointer;
+}

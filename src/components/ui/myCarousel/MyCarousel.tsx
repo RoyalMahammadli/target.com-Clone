@@ -1,39 +1,17 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './MyCarousel.css'
-import { useEffect, useState } from "react"
-import Card from "../Card/Card"
-import axios from 'axios';
-// import { getData } from '../../../service/getData';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store';
+import Card from "../Card/Card";
+import './MyCarousel.css';
 
 
 function MyCarousel() {
-    const url: string = 'https://fakestoreapi.com/products'
     interface myshopItems {
         [key: string]: string
     }
-    const [data, setData] = useState<myshopItems[] | null>([])
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(url)
-            setData(response.data)
 
-        } catch (err) {
-            console.log("error");
-
-        }
-    }
-    useEffect(() => { fetchData() }, [])
-  
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const data = await getData()
-    //         setData(data)
-    //     })()
-    // }, [])
-
-
+    const { products } = useSelector((store: RootState) => store.data)
 
 
     const responsive = {
@@ -57,19 +35,13 @@ function MyCarousel() {
     };
 
     return (
-
-
         <Carousel responsive={responsive} draggable >
-            {data && data?.map(item => {
+            {products.length !== 0 && products?.map((item: any) => {
                 return (
-                    <Card   {...item} />
+                    <Card key={item.id}  {...item} />
                 )
             })}
         </Carousel>
-
-
-
-
     )
 }
 

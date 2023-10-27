@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom"
-import Index from "../pages/home/Index"
-import Registry from "../pages/registry/Registry"
-import Redcard from "../pages/redcard/Redcard"
-import Target from "../pages/targetCircle/Target"
-import Findstores from "../pages/findStores/Findstores"
-import Weeklyad from "../pages/weeklyAd/Weeklyad"
-import Notfound from "../pages/notFound/Notfound"
 import Basket from "../pages/basket/Basket"
 import CategoryPage from "../pages/category"
+import Findstores from "../pages/findStores/Findstores"
+import Index from "../pages/home/Index"
+import Notfound from "../pages/notFound/Notfound"
+import Redcard from "../pages/redcard/Redcard"
+import Registry from "../pages/registry/Registry"
+import Target from "../pages/targetCircle/Target"
+import Weeklyad from "../pages/weeklyAd/Weeklyad"
 
 function Routing() {
     return (
@@ -20,7 +20,8 @@ function Routing() {
                 <Route path="/circle" element={<Target />} />
                 <Route path="/find-stores" element={<Findstores />} />
                 <Route path="/basket" element={<Basket />} />
-                <Route path="/category/:cat" element={<CategoryPage />} />
+                <Route path="/category/:catElement" element={<CategoryPage />} />
+                {/* <Route path="/category/:catElement/:id" element={<DetailPage />} /> */}
                 <Route path='*' element={<Notfound />} />
             </Routes>
         </div>

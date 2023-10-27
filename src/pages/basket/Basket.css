@@ -82,18 +82,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* width: 100%; */
+  margin: 0 auto;
 }
-.basket-added-box main ul li figure{
-  width: 6rem;
+.basket-details2 .title {
+  text-overflow: ellipsis;
+  width: 70%;
+  overflow: hidden;
 }
-.basket-added-box main ul li figure img{
+.basket-added-box main ul li figure {
+  width: 7rem;
+}
+.basket-added-box main ul li figure img {
   width: 100%;
 }
-.basket-added-box main ul li span{
-  color: #CC0000;
+.basket-added-box main ul li span {
+  color: #cc0000;
   font-weight: bold;
 }
 .basket-added-box main ul p {
-margin: 0;
-text-transform: capitalize;
+  margin: 0;
+  text-transform: capitalize;
 }

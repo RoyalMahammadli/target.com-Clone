@@ -1,11 +1,22 @@
-import { useDispatch } from 'react-redux';
-import { useState } from 'react';
-import { addToBasket } from '../../../store/slices/basketSlice';
+import { CheckOutlined } from '@ant-design/icons';
 import { Drawer } from 'antd';
-import './Card.css'
-function Card({ title, image, price, category, description, id }: any) {
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../store';
+import { addToBasket } from '../../../store/slices/basketSlice';
+import './Card.css';
+function Card({ title, image, price, category, id }: any) {
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false);
+    const [clicked, setClicked] = useState(false);
+
+    const { products } = useSelector((store: RootState) => store.data)
+
+    const handleClick = () => {
+        const findElement: any = products.find((item: any) => item.id === id)
+        dispatch(addToBasket(findElement))
+        setClicked(true)
+    }
     const showDrawer = () => {
         setOpen(true);
     };
@@ -13,8 +24,8 @@ function Card({ title, image, price, category, description, id }: any) {
         setOpen(false);
     };
     return (
-
         <div className='card'>
+            {/* <Link link="/${item.category}/{item.id}" ></Link> */}
             <div className='top'>
                 <figure>
                     <img src={image} alt="image" />
@@ -24,7 +35,7 @@ function Card({ title, image, price, category, description, id }: any) {
                 <p>{title} </p>
             </div>
             <button onClick={showDrawer}>Add to cart</button>
-            <Drawer title="Choose option" placement="right" onClose={onClose} open={open}>
+            <Drawer title={!clicked ? ' Choose option' : [<CheckOutlined style={{ color: 'green' }} />, 'Added to basket']} placement="right" onClose={onClose} open={open}>
                 <div className="drawer-top">
                     <figure>
                         <img src={image} alt="cart image" />
@@ -38,7 +49,7 @@ function Card({ title, image, price, category, description, id }: any) {
                 <div className="drawer-bot">
                     <h5>Get it Thu,Oct 26</h5>
                     <span>Free shipping with Red Card or <u>${price}</u>  orders</span>
-                    <button onClick={() => dispatch(addToBasket({ id, image, title, price, category, description }))}>Add to cart</button>
+                    <button onClick={handleClick}>Add to cart</button>
                 </div>
             </Drawer>
         </div>
