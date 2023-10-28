@@ -8,6 +8,7 @@ import Redcard from "../pages/redcard/Redcard"
 import Registry from "../pages/registry/Registry"
 import Target from "../pages/targetCircle/Target"
 import Weeklyad from "../pages/weeklyAd/Weeklyad"
+import DetailPage from "../pages/detailpage/DetailPage"
 
 function Routing() {
     return (
@@ -21,7 +22,7 @@ function Routing() {
                 <Route path="/find-stores" element={<Findstores />} />
                 <Route path="/basket" element={<Basket />} />
                 <Route path="/category/:catElement" element={<CategoryPage />} />
-                {/* <Route path="/category/:catElement/:id" element={<DetailPage />} /> */}
+                <Route path="/:id" element={<DetailPage />} />
                 <Route path='*' element={<Notfound />} />
             </Routes>
         </div>

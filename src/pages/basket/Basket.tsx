@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import { removeFromBasket } from '../../store/slices/basketSlice';
 import './Basket.css';
-import ItemRate from '../../components/itemRate';
+import { Rate } from 'antd';
 
 function Basket() {
     const { basket, totalAmount, totalQuantity } = useSelector((store: RootState) => store.basket)
@@ -41,18 +41,20 @@ function Basket() {
                                         {basket.map((item: any) => {
                                             return (
                                                 <li key={item.id}>
-                                                    <figure>
-                                                        <img src={item.image} alt="" />
-                                                    </figure>
-                                                    <div className="basket-details1">
+                                                    <div className='width-calc'>
+                                                        <figure >
+                                                            <img src={item.image} alt="" />
+                                                        </figure>
+                                                    </div>
+                                                    <div className="basket-details1 width-calc">
                                                         <p>The Category:{item.category}</p>
-                                                        <ItemRate {...item} />
+                                                        <Rate disabled defaultValue={item.rating?.rate} />
                                                         <p>Qty:{item.quantity}</p>
                                                     </div>
-                                                    <div className="basket-details2">
+                                                    <div className="basket-details2 width-calc" >
                                                         <p className='title'>{item.title}</p>
                                                         <p>Stock:{item.rating?.count}</p>
-                                                        <span> The price:${item.price}</span>
+                                                        <span className='price'> The price:${item.price}</span>
                                                     </div>
                                                     <CloseOutlined role='button' onClick={() => dispatch(removeFromBasket(item.id))} />
                                                 </li>

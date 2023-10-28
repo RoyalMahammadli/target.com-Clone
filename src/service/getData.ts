@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getData = async (endpoint?: string | null) => {
+export const getData = async (endpoint?: string | null | number) => {
   const url: string = "https://fakestoreapi.com/products/";
   try {
     const response = await axios.get(`${url}${endpoint || ""}`);

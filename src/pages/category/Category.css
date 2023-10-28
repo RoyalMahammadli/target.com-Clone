@@ -56,7 +56,7 @@
 .item-info .free {
   color: green;
 }
-.item-info button {
+.category button {
   width: 30%;
   margin: 0.5rem 0;
   background-color: rgb(204, 0, 15);
@@ -68,7 +68,7 @@
   font-weight: 600;
   font-size: .8rem;
 }
-.item-info button:hover {
+.category button:hover {
   background-color: rgb(170, 2, 13);
   cursor: pointer;
 }

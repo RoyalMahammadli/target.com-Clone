@@ -7,13 +7,7 @@ import './MyCarousel.css';
 
 
 function MyCarousel() {
-    interface myshopItems {
-        [key: string]: string
-    }
-
     const { products } = useSelector((store: RootState) => store.data)
-
-
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.

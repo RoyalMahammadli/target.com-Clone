@@ -1,17 +1,16 @@
 import { CheckOutlined } from '@ant-design/icons';
-import { Drawer } from 'antd';
+import { Drawer, Rate } from 'antd';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { RootState } from '../../../store';
 import { addToBasket } from '../../../store/slices/basketSlice';
 import './Card.css';
-function Card({ title, image, price, category, id }: any) {
+function Card({ title, image, price, category, id, rating }: any) {
     const dispatch = useDispatch()
     const [open, setOpen] = useState(false);
     const [clicked, setClicked] = useState(false);
-
     const { products } = useSelector((store: RootState) => store.data)
-
     const handleClick = () => {
         const findElement: any = products.find((item: any) => item.id === id)
         dispatch(addToBasket(findElement))
@@ -25,15 +24,16 @@ function Card({ title, image, price, category, id }: any) {
     };
     return (
         <div className='card'>
-            {/* <Link link="/${item.category}/{item.id}" ></Link> */}
-            <div className='top'>
-                <figure>
-                    <img src={image} alt="image" />
-                </figure>
-                <span>${price}</span>
-                <p>{category}</p>
-                <p>{title} </p>
-            </div>
+            <Link to={`/${id}`}>
+                <div className='top'>
+                    <figure>
+                        <img src={image} alt="image" />
+                    </figure>
+                    <span className='price'>${price}</span>
+                    <Rate disabled defaultValue={rating?.rate} />
+                    <p>{category}</p>
+                    <p>{title} </p>
+                </div> </Link>
             <button onClick={showDrawer}>Add to cart</button>
             <Drawer title={!clicked ? ' Choose option' : [<CheckOutlined style={{ color: 'green' }} />, 'Added to basket']} placement="right" onClose={onClose} open={open}>
                 <div className="drawer-top">
@@ -52,7 +52,7 @@ function Card({ title, image, price, category, id }: any) {
                     <button onClick={handleClick}>Add to cart</button>
                 </div>
             </Drawer>
-        </div>
+        </div >
     )
 }
 

@@ -19,7 +19,7 @@ function MyDropdown() {
             setData(apiData)
         })()
     }, [])
-    
+
     return (
         <div onClick={handleDropdown} className='item'>
             <p>Categories</p>

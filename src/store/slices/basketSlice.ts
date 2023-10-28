@@ -40,24 +40,17 @@ export const basketSlice = createSlice({
     },
 
     removeFromBasket: (state: any, action) => {
-      let initialValue = state.totalQuantity;
+      state.basket = state.basket.filter(
+        (item: any) => item.id !== action.payload
+      );
       state.totalQuantity = state.basket.reduce(
-        (accum: number, item: any) => (state.totalQuantity -= item.quantity),
-        initialValue
+        (total: number, item: any) => (total += item.quantity),
+        0
       );
-      // const filteredQuantity = state.basket.map((item: any) => {
-      //   if (item.id === action.payload) {
-      //     state.totalQuantity - item.quantity;
-      //   }
-
-      //   return state.totalQuantity;
-      // });
-      // state.totalQuantity = filteredQuantity;
-      console.log(state.totalQuantity);
-      const filteredElement = state.basket.filter(
-        (item: any) => item.id != action.payload
+      state.totalAmount = state.basket.reduce(
+        (total: number, item: any) => (total += item.price * item.quantity),
+        0
       );
-      state.basket = filteredElement;
 
       //set localStorage
       localStorage.setItem("basket", JSON.stringify(state.basket));

@@ -96,11 +96,14 @@
 .basket-added-box main ul li figure img {
   width: 100%;
 }
-.basket-added-box main ul li span {
+.basket-added-box  .price {
   color: #cc0000;
   font-weight: bold;
 }
 .basket-added-box main ul p {
   margin: 0;
   text-transform: capitalize;
+}
+.width-calc {
+  width: calc((100% - 20px)/3);
 }
