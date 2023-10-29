@@ -14,7 +14,7 @@ function CategoryPage() {
         useEffect(() => {
             (async () => {
                 const apiData = await getData(`category/${catElement}`)
-                console.log(apiData);
+                // console.log(apiData);
                 setData(apiData)
             })()
         }, [catElement])

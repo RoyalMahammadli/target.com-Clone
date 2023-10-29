@@ -4,6 +4,7 @@ import { BiSearch } from 'react-icons/bi'
 import { BsFillMicFill } from 'react-icons/bs'
 import { getData } from '../../../service/getData'
 import './SearchInput.css'
+import { Link } from 'react-router-dom'
 function SearchInput() {
     const [open, setOpen] = useState<boolean>(false)
     const [data, setData] = useState([])
@@ -38,7 +39,7 @@ function SearchInput() {
                 {filtermap.map((item: any) => {
                     return (
                         <li key={nanoid()}>
-                            {item}
+                            <Link to={`/category/${item}`}>  {item}</Link>
                         </li>
                     )
                 })}

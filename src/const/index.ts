@@ -178,5 +178,4 @@ export const HallowenItems: myHallowenItems[] = [
   }
 ];
 
-// MainNav Categories
 

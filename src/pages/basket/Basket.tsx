@@ -1,9 +1,9 @@
 import { CloseOutlined } from '@ant-design/icons';
+import { Rate } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import { removeFromBasket } from '../../store/slices/basketSlice';
 import './Basket.css';
-import { Rate } from 'antd';
 
 function Basket() {
     const { basket, totalAmount, totalQuantity } = useSelector((store: RootState) => store.basket)

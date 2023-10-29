@@ -9,8 +9,19 @@
   width: 300px;
   position: relative;
 }
-.search ul li{
+.search ul li {
   padding: .5rem;
+  border-bottom: 1px solid rgb(189, 184, 184);
+  padding: 1rem 0;
+  text-transform: capitalize;
+  transition: .4s all;
+}
+.search ul li a {
+  color: black;
+  font-weight: 500;
+}
+.search ul li:hover {
+  text-decoration: underline;
 }
 .search input {
   outline: none;

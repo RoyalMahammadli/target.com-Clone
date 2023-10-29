@@ -1,0 +1,45 @@
+.detail-page {
+  display: flex;
+  padding: 2rem 0;
+}
+.detail-page .leftSide {
+  width: 40%;
+}
+.detail-page .rightSide {
+  width: 40%;
+}
+.detail-page .leftSide figure {
+  border: 1px solid gray;
+  width: 30rem;
+  position: relative;
+}
+.detail-page .leftSide figure img {
+  width: 100%;
+  object-fit: contain;
+}
+.detail-page .leftSide .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+}
+.rightSide .description {
+  width: 90%;
+}
+.rightSide p span {
+  color: red;
+}
+.detail-page .rightSide button {
+  width: 100%;
+  margin: 1rem 0;
+  background-color: rgb(204, 0, 15);
+  padding: .9rem;
+  border: 1px solid rgb(204, 0, 15);
+  border-radius: .5rem;
+  color: white;
+  transition: .4s all;
+}
+.detail-page .rightSide button:hover {
+  background-color: #aa0000;
+  cursor: pointer;
+}
